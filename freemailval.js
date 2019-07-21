@@ -14,12 +14,19 @@ var methods = {
 	);
 };
 
-$("#form-comment").validate({
+$("#form").validate({
 rules: {
       email:{
         required: true,
         freemail: true,
         }
       },
+messages: {
+      email:{
+	required:"<font color='red'>電子メールを入力してください</font>",
+	email:"<font color='red'>正しいアドレスで入力してください</font>",
+	freemail:"<font color='red'>フリーメールは使えません</font>"
+        }
+      }
 });
 </script>
